@@ -7,7 +7,7 @@ RUN cd $HOME
 RUN wget https://community-static.aldebaran.com/resources/2.5.5/sdk-python/pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
 
 # Extract file
-RUN tar -xvzf pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
+RUN tar -xvzf pynaoqi-python2.7-2.5.5.5-linux64.tar.gz && rm -R pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
 
 # Set environment variable
-ENV export PYTHONPATH=${PYTHONPATH}:/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages
+ENV PYTHONPATH=${PYTHONPATH}:/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages

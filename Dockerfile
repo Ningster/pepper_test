@@ -10,4 +10,4 @@ RUN wget https://community-static.aldebaran.com/resources/2.5.5/sdk-python/pynao
 RUN tar -xvzf pynaoqi-python2.7-2.5.5.5-linux64.tar.gz
 
 # Set environment variable
-RUN export PYTHONPATH=${PYTHONPATH}:/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages
+ENV export PYTHONPATH=${PYTHONPATH}:/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages

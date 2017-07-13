@@ -11,3 +11,7 @@ RUN tar -xvzf pynaoqi-python2.7-2.5.5.5-linux64.tar.gz && rm -R pynaoqi-python2.
 
 # Set environment variable
 ENV PYTHONPATH=${PYTHONPATH}:/pynaoqi-python2.7-2.5.5.5-linux64/lib/python2.7/site-packages
+
+# Install vim
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "-y", "vim"]
